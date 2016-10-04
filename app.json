@@ -1,0 +1,6 @@
+{
+  "name": "Play Framework with Scala.js and Binding.scala",
+  "description": "Simple example application showing how you can integrate a Play project with a Scala.js project.",
+  "website": "https://github.com/Algomancer/Full-Stack-Scala-Starter",
+  "success_url": "/"
+}
