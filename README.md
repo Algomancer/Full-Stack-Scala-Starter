@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/Full-Stack-Scala-Starter/Lobby](https://badges.gitter.im/Full-Stack-Scala-Starter/Lobby.svg)](https://gitter.im/Full-Stack-Scala-Starter/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This is a simple example application showing how you can integrate a Play project with a Scala.js, Scala.binding project. 
+This is a simple example application showing how you can integrate a Play project with a Scala.js, Binding.scala project. 
 
 Frontend communicates with backend via JSON. Project aims to be a simple modern starting point.
 
