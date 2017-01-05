@@ -12,6 +12,7 @@ lazy val server = (project in file("server")).settings(
     "com.typesafe.play" %% "play-slick" % "2.0.0",
     "com.typesafe.play" %% "play-slick-evolutions" % "2.0.0",
     "com.vmunier" %% "scalajs-scripts" % "1.0.0",
+    filters,
     specs2 % Test
   ),
   // Compile the project before generating Eclipse files, so that generated .scala or .class files for views and routes are present
