@@ -1,10 +1,10 @@
 package example
 
 import com.thoughtworks.binding.Binding.Var
-import com.thoughtworks.binding.dom
+import com.thoughtworks.binding.{Binding, dom}
 import org.scalajs.dom.document
 import org.scalajs.dom.ext.Ajax
-import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.{Event, HTMLElement}
 
 import scala.scalajs.concurrent.JSExecutionContext.Implicits.queue
 import scala.scalajs.js
@@ -14,6 +14,7 @@ import scala.scalajs.js.JSON
 
 object ScalaJSExample extends js.JSApp {
 
+  implicit def makeIntellijHappy(x: scala.xml.Elem): Binding[HTMLElement] = ???
 
   /**
     * Ajax Request to server, updates data state with number
@@ -22,8 +23,8 @@ object ScalaJSExample extends js.JSApp {
     */
   def countRequest(data: Var[String]) = {
     val url = "http://localhost:9000/count"
-    Ajax.get(url).onSuccess { case xhr =>
-      data := JSON.parse(xhr.responseText).count.toString
+    Ajax.get(url).foreach { case xhr =>
+      data.value = JSON.parse(xhr.responseText).count.toString
     }
   }
 
